@@ -146,6 +146,7 @@ git push
    - `VITE_SUPABASE_URL`
    - `VITE_SUPABASE_ANON_KEY`
 4. Deploy and open the production URL.
+5. **Link previews (Facebook, Messenger, LinkedIn):** after you have a domain, set absolute image URLs in `index.html` — replace `/og-image.jpg` with `https://YOUR-DOMAIN.com/og-image.jpg` on `og:image` and `twitter:image` (crawlers prefer full URLs).
 
 ---
 
