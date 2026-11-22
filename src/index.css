@@ -1,0 +1,106 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-emerald-institutional: #063f32;
+  --color-forest: #0b5542;
+  --color-gold: #c5a253;
+  --color-gold-light: #d7b76d;
+  --color-ivory: #faf8f1;
+  --color-cream: #f4f0e5;
+  --color-ink: #1f2b27;
+
+  --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    @apply m-0 bg-ivory font-sans text-ink;
+  }
+
+  #root {
+    @apply min-h-dvh;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-serif-body {
+    font-family: var(--font-serif);
+  }
+
+  .masthead-texture {
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 0%, rgb(199 162 83 / 12%), transparent),
+      linear-gradient(180deg, #063f32 0%, #0b5542 55%, #063f32 100%);
+  }
+
+  .btn-gloss-green {
+    background: linear-gradient(180deg, #1a7a5f 0%, #0b5542 45%, #063f32 100%);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 25%),
+      0 2px 6px rgb(0 0 0 / 25%);
+  }
+
+  .btn-gloss-gold {
+    background: linear-gradient(180deg, #e8d39a 0%, #c5a253 50%, #a8873f 100%);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 35%),
+      0 2px 6px rgb(0 0 0 / 20%);
+  }
+
+  .institutional-nav {
+    background: linear-gradient(180deg, #0a4a3a 0%, #0b5542 35%, #063f32 100%);
+  }
+
+  .footer-mantra-strip {
+    background:
+      radial-gradient(ellipse 50% 140% at 50% 50%, rgb(32 140 108 / 40%), transparent 70%),
+      radial-gradient(ellipse 35% 100% at 12% 50%, rgb(199 162 83 / 14%), transparent),
+      radial-gradient(ellipse 35% 100% at 88% 50%, rgb(199 162 83 / 14%), transparent),
+      linear-gradient(
+        180deg,
+        #042a22 0%,
+        #073d30 18%,
+        #0d6049 48%,
+        #0a4f3d 55%,
+        #063f32 100%
+      );
+    box-shadow:
+      inset 0 1px 0 rgb(228 200 130 / 0.55),
+      inset 0 -1px 0 rgb(0 0 0 / 0.2);
+  }
+
+  .footer-mantra-glow-line {
+    height: 2px;
+    min-width: 2rem;
+    flex: 1 1 0%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgb(197 162 83 / 0.2) 22%,
+      rgb(235 210 150 / 0.95) 50%,
+      rgb(197 162 83 / 0.2) 78%,
+      transparent 100%
+    );
+    box-shadow: 0 0 12px rgb(215 183 109 / 0.5);
+  }
+
+  .footer-mantra-lotus {
+    filter: drop-shadow(0 0 6px rgb(235 210 150 / 0.75)) drop-shadow(0 1px 2px rgb(0 0 0 / 0.35));
+  }
+
+  .footer-mantra-text {
+    text-shadow:
+      0 1px 2px rgb(0 0 0 / 0.65),
+      0 0 18px rgb(215 183 109 / 0.35);
+  }
+}
